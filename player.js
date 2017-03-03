@@ -112,7 +112,7 @@ const playTone = function(frequency, duration, audioContext) {
 };
 
 // Setup a single shared audio context for the juke box.
-let jukeboxAudioContext = new webkitAudioContext();
+let jukeboxAudioContext = new AudioContext();
 
 // Play a given song at "bpm" beats per minute.
 // Calls "onComplete" when the song is over.
@@ -153,13 +153,13 @@ const playSong = function(song, bpm, onComplete) {
 
 };
 
-let song = [  {pitch: 'E', beats: 0.25},
-              {pitch: 'E', beats: 0.25},
-              {pitch: 'F', beats: 0.25},
-              {pitch: 'G', beats: 0.25},
-              {pitch: 'G', beats: 0.25},
-              {pitch: 'F', beats: 0.25},
-              {pitch: 'F', beats: 0.25}
-            ];
+// let song = [  {pitch: 'E', beats: 0.25},
+//               {pitch: 'E', beats: 0.25},
+//               {pitch: 'F', beats: 0.25},
+//               {pitch: 'G', beats: 0.25},
+//               {pitch: 'G', beats: 0.25},
+//               {pitch: 'F', beats: 0.25},
+//               {pitch: 'F', beats: 0.25}
+//             ];
 
-playSong(song, 0.25);
+// playSong(song, 0.25);
